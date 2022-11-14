@@ -38,6 +38,9 @@
             --overflow-color: rgba(33, 150, 243, 0.9);
             /* transition transform ms */
             --transfor-ms: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            /* modal menu */
+            --mdal-menu-rgba: rgba(33, 33, 33, 0.2);
+            --color-comentss: rgba(117, 117, 117, 0.5);
 }
 .container {
     margin-left: auto;
@@ -305,11 +308,12 @@ p {
     position: absolute;
     top: 50%;
     left: 50%;
+    padding-left: 41px;
+    padding-right: 39px;
     transform: translateX(-50%) translateY(-50%);
 
     width: 528px;
     min-height: 581px;
-    padding: 40px;
     background-color: var(--before-color);
     border-radius: 4px;
 }
@@ -330,8 +334,171 @@ p {
 
     cursor: pointer;
 }
-/* modal menu */
 
+/* modal menu */
+.modal-title {
+    padding-top: 40px;
+    padding-bottom: 2px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--title-text-color);
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    padding-left: 41px;
+    padding-right: 39px;
+
+
+    width: 448px;
+    height: 40px;
+    left: 576px;
+    top: 315px;
+    
+    border: 1px solid var(--mdal-menu-rgba);
+    border-radius: 4px;
+    cursor: pointer;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:hover + .form-icon {
+    fill: var(--accent-color);
+}
+.form-input:hover,
+.form-input:focus {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+}
+.form-labelss {
+    margin-bottom: 4px;
+    padding-top: 10px;
+}
+.form-email {
+    width: 448px;
+    height: 120px;
+    left: 576px;
+    top: 519px;
+    
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.form-field input {
+    width: 100%;
+}
+.form-field {
+    display: block;
+    position: relative;
+    padding-top: 10px;
+}
+.form-icon {
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-btn {
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: inherit;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-btn:hover,
+.form-btn:focus {
+    background-color: var(--btn-color);
+}
+.form-btngo {
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+        
+    letter-spacing: 0.06em;
+    color: var(--before-color);
+}
+.form-label, .form-labelss{
+    display: flex;
+    text-align: left;
+} 
+.form-email {
+    padding: 12px 16px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    
+    color: var(--color-comentss);
+}
+.form-label-ways {
+    display: block;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    
+}
+.form-checkbox {
+    appearance: none;
+    
+}
+.form-checkbox-icon .unchecked {
+    opacity: 1;
+    transition: var(--transfor-ms);
+    cursor: pointer;
+}
+.form-checkbox:checked + .form-checkbox-icon .unchecked {
+    opacity: 0;
+}
+.form-checkbox-icon .checked {
+    opacity: 0;
+    transition: var(--transfor-ms);
+    cursor: pointer;
+}
+.form-checkbox:checked + .form-checkbox-icon .checked {
+    opacity: 1;
+}
+.form-checktext {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    
+    letter-spacing: 0.03em;
+    
+    color: var(--text-color);
+}
+.form-checktext-blue {
+    color: var(--accent-color);
+}
 /* section page */
 .page-icons {
     width: 270px;
@@ -342,7 +509,7 @@ p {
     margin-bottom: 30px;
      
     background: var(--services-color);
-        border-radius: 4px;
+    border-radius: 4px;
 }
 .page-container {
     display: flex;
