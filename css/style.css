@@ -333,8 +333,15 @@ p {
     background-color: transparent;
 
     cursor: pointer;
-}
 
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-btn:hover,
+.close-btn:focus {
+    fill: var(--accent-color);
+}
 /* modal menu */
 .modal-title {
     padding-top: 40px;
@@ -391,6 +398,14 @@ p {
     
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-email:hover,
+.form-email:focus {
+    border-color: var(--accent-color);
 }
 .form-field input {
     width: 100%;
@@ -404,10 +419,6 @@ p {
     position: absolute;
     bottom: 14px;
     left: 15px;
-
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-btn {
     width: 200px;
