@@ -245,6 +245,11 @@ p {
 }
 
 .hero-title {
+    width: 800px;
+    height: 120px;
+    margin-right: auto;
+    margin-left: auto;
+
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
