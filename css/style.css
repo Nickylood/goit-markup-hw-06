@@ -96,7 +96,6 @@ p {
     margin-bottom: 0;
 }
 .header {
-    border-bottom: -1px solid;
     border-color: #ECECEC;
     background-color: var(--before-color);
 }
@@ -150,7 +149,6 @@ p {
     height: 5px;
     opacity: 0;
     transform: scaleX(0.2);
-    border-bottom: -1px;
     border-radius: 2px;
     background-color: var(--accent-color);
 
@@ -305,11 +303,10 @@ p {
     pointer-events: none;
 }
 .modal {
+    padding: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
-    padding-left: 41px;
-    padding-right: 39px;
     transform: translateX(-50%) translateY(-50%);
 
     width: 528px;
@@ -344,9 +341,6 @@ p {
 }
 /* modal menu */
 .modal-title {
-    padding-top: 40px;
-    padding-bottom: 2px;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -362,8 +356,7 @@ p {
     display: flex;
     flex-direction: column;
     margin-top: 4px;
-    padding-left: 41px;
-    padding-right: 39px;
+    padding-left: 42px;
 
 
     width: 448px;
@@ -386,11 +379,36 @@ p {
     border-color: var(--accent-color);
     fill: var(--accent-color);
 }
+.form-label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+
+letter-spacing: 0.01em;
+
+    color: var(--text-color);
+}
 .form-labelss {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
     margin-bottom: 4px;
-    padding-top: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+
+
+    letter-spacing: 0.01em;
+
+    color: var(--text-color);
 }
 .form-email {
+    resize: none;
     width: 448px;
     height: 120px;
     left: 576px;
@@ -412,23 +430,26 @@ p {
 }
 .form-field {
     display: block;
+    text-align: left;
     position: relative;
-    padding-top: 10px;
+    margin-top: 10px;
 }
+
 .form-icon {
     position: absolute;
     bottom: 14px;
     left: 15px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-btn {
-    width: 200px;
-    height: 50px;
+    padding: 0;
     cursor: pointer;
-
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
     border-color: inherit;
+    border-radius: 4px;
 
     transition-property: background-color;
     transition-duration: 250ms;
@@ -439,11 +460,13 @@ p {
     background-color: var(--btn-color);
 }
 .form-btngo {
-    display: flex;
-    justify-content: center;
-
+    display: block;
+    text-align: center;
+    align-items: center;
+    
     font-family: 'Roboto';
     font-style: normal;
+    padding: 10px 52px;
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30 / 16);
@@ -451,10 +474,6 @@ p {
     letter-spacing: 0.06em;
     color: var(--before-color);
 }
-.form-label, .form-labelss{
-    display: flex;
-    text-align: left;
-} 
 .form-email {
     padding: 12px 16px;
 
@@ -472,8 +491,8 @@ p {
     display: flex;
     align-items: center;
     gap: 9px;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     
 }
 .form-checkbox {
@@ -739,7 +758,9 @@ p {
 .footer-joins {
     display: flex;
     align-items: baseline;
-    gap: 70px;
+}
+.footer-secondjoins {
+    margin-right: 70px;
 }
 .address {
     margin-top: 20px;
@@ -930,6 +951,7 @@ p {
 join-go {
     display: flex;
     align-content: center;
+    margin-left: 70px;
     width: 206px;
     height: 80px;
 }
@@ -979,8 +1001,11 @@ join-go {
     fill: var(--before-color);
 }
 /* form-label-last */
+.footer-lastmenu {
+    margin-left: 93px;
+}
 .last-text {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -1001,6 +1026,7 @@ join-go {
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    color:var(--before-color);
 }
 .last-label {
     padding-right: 12px;
@@ -1012,11 +1038,10 @@ join-go {
     gap: 10px;
     width: 200px;
     height: 50px;
-    left: 1185px;
-    top: 2784px;
 
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 1px;
     border-radius: 4px;
     cursor: pointer;
 }
