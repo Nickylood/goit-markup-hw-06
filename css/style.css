@@ -346,6 +346,7 @@ p {
 }
 /* modal menu */
 .modal-title {
+    margin-bottom: 10px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -376,8 +377,10 @@ p {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:hover + .form-icon {
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon {
     fill: var(--accent-color);
+   
 }
 .form-input:hover,
 .form-input:focus {
@@ -398,7 +401,6 @@ letter-spacing: 0.01em;
 .form-labelss {
     display: block;
     text-align: left;
-    margin-top: 10px;
     margin-bottom: 4px;
 
     font-family: 'Roboto';
@@ -413,6 +415,7 @@ letter-spacing: 0.01em;
     color: var(--text-color);
 }
 .form-email {
+    display: block;
     resize: none;
     width: 448px;
     height: 120px;
@@ -430,14 +433,19 @@ letter-spacing: 0.01em;
 .form-email:focus {
     border-color: var(--accent-color);
 }
-.form-field input {
-    width: 100%;
+.form-fields {
+    display: block;
+    margin-top: 10px;
 }
 .form-field {
     display: block;
     text-align: left;
     position: relative;
     margin-top: 10px;
+
+}
+.form-field:first-child {
+    margin-top: 0;
 }
 
 .form-icon {
@@ -1034,7 +1042,7 @@ join-go {
     color:var(--before-color);
 }
 .last-label {
-    padding-right: 12px;
+    margin-right: 12px;
 }
 .last-mail {
     display: inline-flex;
