@@ -369,6 +369,7 @@ p {
     height: 40px;
     left: 576px;
     top: 315px;
+    outline: none;
     
     border: 1px solid var(--mdal-menu-rgba);
     border-radius: 4px;
@@ -421,14 +422,27 @@ letter-spacing: 0.01em;
     height: 120px;
     left: 576px;
     top: 519px;
-    
+
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    outline: transparent;
 
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+textarea::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+
+    color: var(--h1-color);
+    
+}
+
 .form-email:hover,
 .form-email:focus {
     border-color: var(--accent-color);
